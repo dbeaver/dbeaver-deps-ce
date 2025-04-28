@@ -6,7 +6,7 @@
     <groupId>org.jkiss.bundle</groupId>
     <artifactId>org.jkiss.bundle.jakarta.jetty11.websocket</artifactId>
     <version>1.0.0</version>
-    <packaging>eclipse-plugin</packaging>
+    <packaging>${packaging.type}</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
         <artifactId>external-bundles</artifactId>

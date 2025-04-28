@@ -1,0 +1,4 @@
+
+Import-Package: org.slf4j;resolution:=optional,
+ org.slf4j.helpers;resolution:=optional,
+ org.slf4j.spi;resolution:=optional
