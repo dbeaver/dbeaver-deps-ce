@@ -4,9 +4,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import picocli.CommandLine;
 
-import javax.sql.rowset.spi.XmlReader;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -14,17 +12,19 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.MappedByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 import java.util.stream.Stream;
 
-public class MavenOSGIFragmentPacker  {
+public class MavenOSGIFragmentPacker {
 
     public static void main(String[] args) {
         try {
@@ -50,18 +50,14 @@ public class MavenOSGIFragmentPacker  {
             String moduleVersion = parseResult.version;
             String symbolicName = parseResult.artifactId;
             String moduleName = String.valueOf(basedir.getFileName());
-            List<String> classpaths = new ArrayList<>();
+            List<String> classpathList = new ArrayList<>();
             Path path = basedir.resolve("lib");
             if (Files.exists(path)) {
                 try (Stream<Path> list = Files.list(path)) {
-                    list.filter(Files::isRegularFile)
-                        .filter(p -> p.getFileName().toString().endsWith(".jar"))
-                        .forEach(p -> {
-                            classpaths.add(p.toAbsolutePath().toString());
-                        });
+                    list.filter(Files::isRegularFile).filter(p -> p.getFileName().toString().endsWith(".jar")).forEach(p -> classpathList.add(p.toAbsolutePath().toString()));
                 }
             }
-            String s = buildManifest(symbolicName, moduleName, moduleVersion, classpaths, params.target, fragPath.toPath());
+            String s = buildManifest(symbolicName, moduleName, moduleVersion, classpathList, params.target, fragPath.toPath());
             Files.createFile(manifestPath);
             Files.write(manifestPath, s.getBytes());
         } catch (Exception e) {
@@ -93,6 +89,7 @@ public class MavenOSGIFragmentPacker  {
         String version = getTagValue(doc, "version");
         return new ParseResult(groupId, artifactId, version, null);
     }
+
     // Helper method to retrieve the text content of a given tag from an Element.
     private static String getTagValue(Element element, String tag) {
         NodeList nodeList = element.getElementsByTagName(tag);
@@ -110,22 +107,15 @@ public class MavenOSGIFragmentPacker  {
         }
         return null;
     }
-    // Utility method to extract the value of a given tag
-    private static String getTagValue(String tag, Document document) {
-        NodeList nodeList = document.getElementsByTagName(tag);
-        if (nodeList.getLength() > 0) {
-            return nodeList.item(0).getTextContent();
-        }
-        return null;  // Return null if the tag is not found
-    }
+
     private static String buildManifest(
         String symbolicName,
         String moduleName,
         String moduleVersion,
         List<String> classpaths,
         Path basedir,
-        Path fragPath)
-        throws IOException {
+        Path fragPath
+    ) {
 
         StringBuilder manifest = new StringBuilder();
         manifest.append("Manifest-Version: 1.0\n");
@@ -148,22 +138,50 @@ public class MavenOSGIFragmentPacker  {
         manifest.append("\n");
         // Real all jar files in classpath, extract packages as exports, if packages have no exports in manifest get all packages
         final boolean[] hasExportPackage = {false};
-
+        Set<String> packages = new LinkedHashSet<>();
         for (String classpath : classpaths) {
             try (JarFile jarFile = new JarFile(classpath)) {
                 Manifest mf = jarFile.getManifest();
+                AtomicBoolean currentClasspathContainsExportPackage = new AtomicBoolean(false);
                 if (mf != null) {
-                    mf.getMainAttributes().forEach((key, value) -> {
-                        splitByCommaOutsideQuotes(value.toString()).forEach(v -> {
-                            if (key.toString().startsWith("Export-Package")) {
+                    mf.getMainAttributes().forEach((key, value) -> splitByCommaOutsideQuotes(value.toString()).forEach(v -> {
+                        if (key.toString().startsWith("Export-Package")) {
+                            String pkg = !v.contains(";") ? v : v.split(";")[0].trim();
+                            if (packages.contains(pkg)) {
+                                return;
+                            }
+                            packages.add(pkg);
+                            if (!hasExportPackage[0]) {
+                                currentClasspathContainsExportPackage.set(true);
+                                manifest.append(key).append(": \n ").append(v);
+                                hasExportPackage[0] = true;
+                            } else {
+                                manifest.append(",\n ").append(v);
+                                currentClasspathContainsExportPackage.set(true);
+                            }
+                        }
+                    }));
+                }
+                if (!currentClasspathContainsExportPackage.get()) {
+                    // get all packages from the jar file outside manifest
+                    jarFile.stream().filter(e -> e.getName().endsWith(".class")).filter(e -> !e.getName().contains("META-INF"))
+                        .forEach(e -> {
+                            String className = e.getName();
+                            int lastSlash = className.lastIndexOf('/');
+                            if (lastSlash > 0) {
+                                String pkg = className.substring(0, lastSlash).replace('/', '.');
+                                if (packages.contains(pkg)) {
+                                    return;
+                                }
+                                packages.add(pkg);
                                 if (!hasExportPackage[0]) {
-                                    manifest.append(key).append(": \n ").append(v);
+                                    manifest.append("Export-Package").append(": \n ").append(pkg);
                                     hasExportPackage[0] = true;
                                 } else {
-                                    manifest.append(",\n ").append(v);
+                                    manifest.append(",\n ").append(pkg);
                                 }
                             }
-                        });});
+                        });
                 }
             } catch (IOException e) {
                 System.out.println("Error reading jar file: " + e.getMessage());
@@ -175,7 +193,8 @@ public class MavenOSGIFragmentPacker  {
         manifest.append("\n");
         return manifest.toString();
     }
-    public static List<String> splitByCommaOutsideQuotes(String input) {
+
+    private static List<String> splitByCommaOutsideQuotes(String input) {
         List<String> result = new ArrayList<>();
         StringBuilder current = new StringBuilder();
         boolean insideQuotes = false;
@@ -211,15 +230,16 @@ public class MavenOSGIFragmentPacker  {
                     if (isFirst) {
                         manifest.append(key).append(": \n ").append(string);
                         isFirst = false;
-                    } else  {
+                    } else {
                         manifest.append(",\n ").append(string);
                     }
                 }
-            manifest.append("\n");
+                manifest.append("\n");
             });
         } catch (Exception e) {
             System.out.println("Error extracting dependencies: " + e.getMessage());
-        }}
+        }
+    }
 
     private static String adaptVersion(String moduleVersion) {
         //adapt version to OSGI format
@@ -251,11 +271,6 @@ public class MavenOSGIFragmentPacker  {
         return adaptedVersion.toString();
     }
 
-    private record ParseResult(
-        String groupId,
-        String artifactId,
-        String version,
-        String classifier
-    ) {
+    private record ParseResult(String groupId, String artifactId, String version, String classifier) {
     }
 }
