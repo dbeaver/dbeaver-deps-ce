@@ -4,7 +4,7 @@
     <groupId>org.jkiss.bundle</groupId>
     <artifactId>org.jkiss.bundle.jakarta.jetty.websocket</artifactId>
     <version>1.0.2</version>
-    <packaging>${packaging.type}</packaging>
+    <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
         <artifactId>external-bundles</artifactId>

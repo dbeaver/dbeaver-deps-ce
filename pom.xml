@@ -6,33 +6,30 @@
     <artifactId>external</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <profiles>
-        <profile>
-            <id>deps</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <packaging.type>pom</packaging.type>
-            </properties>
-        </profile>
-        <profile>
-            <id>build</id>
-            <properties>
-                <packaging.type>eclipse-plugin</packaging.type>
-            </properties>
-        </profile>
-    </profiles>
-
     <parent>
         <groupId>com.dbeaver.common</groupId>
         <artifactId>com.dbeaver.common.main</artifactId>
         <version>2.4.0-SNAPSHOT</version>
         <relativePath>../dbeaver-common</relativePath>
     </parent>
-
     <modules>
         <module>bundles</module>
-        <module>maven-osgi-packer</module>
     </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.dbeaver.osgi</groupId>
+                <artifactId>maven-osgi-packer</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>create-osgi-bundle</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

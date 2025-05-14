@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-    xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.dbeaver.osgi</groupId>
+    <artifactId>external-bundles</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
         <artifactId>external</artifactId>
@@ -14,8 +18,6 @@
         <module>eclipse-bundle-jakarta-jetty11-websocket</module>
         <module>eclipse-bundle-jakarta-jetty-websocket</module>
     </modules>
-    <artifactId>external-bundles</artifactId>
-    <packaging>pom</packaging>
     <build>
         <plugins>
             <plugin>
@@ -31,23 +33,12 @@
                         </goals>
                         <configuration>
                             <outputDirectory>lib</outputDirectory>
+                            <excludeScope>compile</excludeScope>
                             <includeScope>runtime</includeScope>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-maven-plugin</artifactId>
-                <version>${tycho-version}</version>
-                <extensions>true</extensions>
-            </plugin>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-packaging-plugin</artifactId>
-                <version>${tycho-version}</version>
-            </plugin>
         </plugins>
     </build>
-
 </project>
