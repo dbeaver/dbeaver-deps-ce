@@ -1,4 +1,4 @@
 cd aggregate || exit
 mvn clean install
-cd ../osgi-bundles || exit
+cd ../target-bundles || exit
 mvn clean install
