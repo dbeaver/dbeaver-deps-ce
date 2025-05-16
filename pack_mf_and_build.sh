@@ -1,4 +1,4 @@
 cd aggregate || exit
-mvn clean install
-cd ../osgi-root || exit
-mvn clean install
+mvn clean install -X
+cd ../osgi-bundles || exit
+mvn clean install -X

@@ -14,8 +14,8 @@
         <relativePath>../../dbeaver-common</relativePath>
     </parent>
     <modules>
-        <module>../bundles/eclipse-bundle-jakarta-jetty-websocket/bundle</module>
-        <module>../bundles/eclipse-bundle-jakarta-jetty11-websocket/bundle</module>
+        <module>eclipse-bundle-jakarta-jetty-websocket</module>
+        <module>eclipse-bundle-jakarta-jetty11-websocket</module>
     </modules>
     <build>
         <plugins>
