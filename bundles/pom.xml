@@ -10,13 +10,20 @@
     <version>1.0.0-SNAPSHOT</version>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
-        <artifactId>external</artifactId>
+        <artifactId>dbeaver-deps-p2</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modules>
         <module>eclipse-bundle-jakarta-jetty11-websocket</module>
         <module>eclipse-bundle-jakarta-jetty-websocket</module>
+        <module>com.github.jsqlparser</module>
+        <module>commons-logging</module>
+        <module>commons-jexl3</module>
+        <module>commons-cli</module>
+        <module>jxpath</module>
+        <module>eclipse-bundle-antlr4</module>
+        <module>com-ibm-icu-base</module>
     </modules>
     <build>
         <plugins>
