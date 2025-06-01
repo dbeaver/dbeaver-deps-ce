@@ -1,1 +1,2 @@
-osgi-bundles/*
+lib
+/target-bundles/
