@@ -22,7 +22,6 @@
         <module>commons-cli</module>
         <module>jxpath</module>
         <module>eclipse-bundle-antlr4</module>
-        <module>com-ibm-icu-base</module>
     </modules>
     <build>
         <plugins>
