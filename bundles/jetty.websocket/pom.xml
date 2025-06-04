@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jkiss.bundle</groupId>
-    <artifactId>org.jkiss.bundle.jakarta.jetty.websocket</artifactId>
-    <version>1.0.2</version>
+    <artifactId>org.eclipse.jetty.ee10.websocket.jetty-ee10-websocket-jakarta-client</artifactId>
+    <version>12.0.15</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>

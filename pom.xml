@@ -23,7 +23,7 @@
                 <version>1.0.0-SNAPSHOT</version>
                 <executions>
                     <execution>
-                        <phase>install</phase>
+                        <phase>package</phase>
                         <goals>
                             <goal>create-osgi-bundle</goal>
                         </goals>

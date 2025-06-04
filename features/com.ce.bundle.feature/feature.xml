@@ -1,0 +1,10 @@
+<feature id="com.jkiss.bundles" label="CE Bundles" version="1.0.0">
+    <plugin id="com.github.jsqlparser" version="0.0.0" />
+    <plugin id="commons-cli" version="0.0.0" />
+    <plugin id="commons-jexl3-cli" version="0.0.0" />
+    <plugin id="commons-logging-jexl3" version="0.0.0" />
+    <plugin id="jetty.websocket-logging" version="0.0.0" />
+    <plugin id="jxpath-bundle-antlr4" version="0.0.0" />
+    <plugin id="org.antlr.antlr4-bundle-jakarta-jetty11-websocket" version="0.0.0" />
+    <plugin id="org.eclipse.jetty.websocket.websocket-jakarta-client-bundle-jakarta-jetty-websocket" version="0.0.0" />
+</feature>

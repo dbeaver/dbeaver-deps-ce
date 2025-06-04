@@ -4,9 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jkiss.bundle</groupId>
-    <artifactId>jsqlparser</artifactId>
+    <artifactId>com.github.jsqlparser</artifactId>
     <version>5.1.0</version>
     <packaging>pom</packaging>
+    <properties>
+        <base.osgi>true</base.osgi>
+    </properties>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
         <artifactId>bundles</artifactId>

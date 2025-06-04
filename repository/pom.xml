@@ -4,26 +4,15 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dbeaver.osgi</groupId>
-    <artifactId>root</artifactId>
+    <artifactId>ce-repository</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
+    <packaging>eclipse-repository</packaging>
     <parent>
         <groupId>com.dbeaver.common</groupId>
         <artifactId>com.dbeaver.common.main</artifactId>
         <version>2.4.0-SNAPSHOT</version>
         <relativePath>../../dbeaver-common</relativePath>
     </parent>
-    <modules>
-        <module>com.github.jsqlparser</module>
-        <module>commons-cli</module>
-        <module>commons-jexl3</module>
-        <module>commons-logging</module>
-        <module>jetty.websocket</module>
-        <module>jxpath</module>
-        <module>org.antlr.antlr4</module>
-        <module>org.eclipse.jetty.websocket.websocket-jakarta-client</module>
-    </modules>
     <dependencies>
         <dependency>
             <groupId>com.dbeaver.osgi</groupId>
@@ -34,14 +23,7 @@
         <plugins>
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-maven-plugin</artifactId>
-                <version>${tycho-version}</version>
-                <extensions>true</extensions>
-            </plugin>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-packaging-plugin</artifactId>
-                <version>${tycho-version}</version>
+                <artifactId>tycho-p2-repository-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

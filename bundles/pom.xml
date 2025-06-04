@@ -15,14 +15,14 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modules>
-        <module>eclipse-bundle-jakarta-jetty11-websocket</module>
-        <module>eclipse-bundle-jakarta-jetty-websocket</module>
+        <module>org.eclipse.jetty.websocket.websocket-jakarta-client</module>
+        <module>jetty.websocket</module>
         <module>com.github.jsqlparser</module>
         <module>commons-logging</module>
         <module>commons-jexl3</module>
         <module>commons-cli</module>
         <module>jxpath</module>
-        <module>eclipse-bundle-antlr4</module>
+        <module>org.antlr.antlr4</module>
     </modules>
     <build>
         <plugins>
