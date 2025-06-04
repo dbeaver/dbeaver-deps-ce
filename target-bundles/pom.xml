@@ -15,20 +15,36 @@
         <relativePath>../../dbeaver-common</relativePath>
     </parent>
     <modules>
-        <module>com.github.jsqlparser</module>
-        <module>commons-cli</module>
-        <module>commons-jexl3</module>
-        <module>commons-logging</module>
         <module>jetty.websocket</module>
-        <module>jxpath</module>
         <module>org.antlr.antlr4</module>
         <module>org.eclipse.jetty.websocket.websocket-jakarta-client</module>
     </modules>
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
         <dependency>
-            <groupId>com.dbeaver.osgi</groupId>
-            <artifactId>com.ce.bundle.feature</artifactId>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.3.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <version>5.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-jexl3</artifactId>
+            <version>3.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-jxpath/commons-jxpath -->
+        <dependency>
+            <groupId>commons-jxpath</groupId>
+            <artifactId>commons-jxpath</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

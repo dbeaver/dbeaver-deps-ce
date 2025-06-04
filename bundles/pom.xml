@@ -17,11 +17,6 @@
     <modules>
         <module>org.eclipse.jetty.websocket.websocket-jakarta-client</module>
         <module>jetty.websocket</module>
-        <module>com.github.jsqlparser</module>
-        <module>commons-logging</module>
-        <module>commons-jexl3</module>
-        <module>commons-cli</module>
-        <module>jxpath</module>
         <module>org.antlr.antlr4</module>
     </modules>
     <build>
