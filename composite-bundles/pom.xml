@@ -28,7 +28,7 @@
                 <version>1.0.0-SNAPSHOT</version>
                 <executions>
                     <execution>
-                        <phase>compile</phase>
+                        <phase>package</phase>
                         <goals>
                             <goal>create-osgi-bundle</goal>
                         </goals>
@@ -47,7 +47,7 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>lib</outputDirectory>
+                            <outputDirectory>target/lib</outputDirectory>
                             <excludeScope>compile</excludeScope>
                             <includeScope>runtime</includeScope>
                         </configuration>
