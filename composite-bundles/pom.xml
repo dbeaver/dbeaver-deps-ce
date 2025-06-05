@@ -4,22 +4,36 @@
         xmlns="http://maven.apache.org/POM/4.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.dbeaver.osgi</groupId>
-    <artifactId>external-bundles</artifactId>
+
+    <artifactId>composite-bundles</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
-        <artifactId>external</artifactId>
+        <artifactId>dbeaver-deps-p2</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modules>
-        <module>eclipse-bundle-jakarta-jetty11-websocket</module>
-        <module>eclipse-bundle-jakarta-jetty-websocket</module>
+        <module>jetty11.websocket</module>
+        <module>jetty12.websocket</module>
+        <module>antlr4</module>
     </modules>
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.dbeaver.osgi</groupId>
+                <artifactId>maven-osgi-packer</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>create-osgi-bundle</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

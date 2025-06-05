@@ -4,45 +4,48 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jkiss.bundle</groupId>
-    <artifactId>org.jkiss.bundle.jakarta.jetty11.websocket</artifactId>
-    <version>1.0.0</version>
+    <artifactId>jetty11.websocket</artifactId>
+    <version>11.0.24</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
-        <artifactId>external-bundles</artifactId>
+        <artifactId>bundles</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+    <properties>
+        <jetty11.version>11.0.24</jetty11.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-client</artifactId>
-            <version>11.0.24</version>
+            <version>${jetty11.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-alpn-client</artifactId>
-            <version>11.0.24</version>
+            <version>${jetty11.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-io</artifactId>
-            <version>11.0.24</version>
+            <version>${jetty11.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-util</artifactId>
-            <version>11.0.24</version>
+            <version>${jetty11.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-http</artifactId>
-            <version>11.0.24</version>
+            <version>${jetty11.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty.websocket</groupId>
             <artifactId>websocket-jakarta-client</artifactId>
-            <version>11.0.24</version>
+            <version>${jetty11.version}</version>
         </dependency>
     </dependencies>
 </project>
