@@ -13,6 +13,7 @@
     <plugin id="org.apache.commons.commons-logging" version="0.0.0" />
     <plugin id="org.apache.commons.cli" version="0.0.0" />
     <plugin id="org.apache.commons.jexl" version="0.0.0" />
+    <plugin id="org.apache.commons.commons-jxpath" version="0.0.0" />
 
     <!-- composite bundles -->
     <plugin id="org.jkiss.bundle.logback" version="0.0.0" />

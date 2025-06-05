@@ -15,7 +15,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/commons-jxpath/commons-jxpath -->
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4</artifactId>
