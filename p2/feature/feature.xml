@@ -6,7 +6,7 @@
 
 
     <!-- contrib -->
-<!--    <plugin id="com.ibm.icu.base" version="0.0.0"/>-->
+    <plugin id="com.ibm.icu.base" version="0.0.0"/>
 
     <!-- maven -->
     <plugin id="com.github.jsqlparser" version="0.0.0"/>
