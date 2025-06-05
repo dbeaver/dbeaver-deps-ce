@@ -19,6 +19,7 @@
         <module>antlr4</module>
         <module>jetty11.websocket</module>
         <module>jetty12.websocket</module>
+        <module>poi</module>
     </modules>
     <build>
         <plugins>
