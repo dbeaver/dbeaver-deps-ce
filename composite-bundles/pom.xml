@@ -15,9 +15,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modules>
+        <module>logback</module>
+        <module>antlr4</module>
         <module>jetty11.websocket</module>
         <module>jetty12.websocket</module>
-        <module>antlr4</module>
     </modules>
     <build>
         <plugins>
