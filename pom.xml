@@ -13,23 +13,7 @@
         <relativePath>../dbeaver-common</relativePath>
     </parent>
     <modules>
-        <module>bundles</module>
+        <module>../dbeaver-osgi-common/maven-osgi-packer</module>
+        <module>composite-bundles</module>
     </modules>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.dbeaver.osgi</groupId>
-                <artifactId>maven-osgi-packer</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>create-osgi-bundle</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>
