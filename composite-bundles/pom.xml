@@ -16,6 +16,7 @@
     </parent>
     <modules>
         <module>apache.batik</module>
+        <module>apache.dbcp</module>
         <module>apache.poi</module>
         <module>antlr4</module>
         <module>gis</module>

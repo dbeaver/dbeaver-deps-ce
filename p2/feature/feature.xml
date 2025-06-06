@@ -19,6 +19,7 @@
     <!-- composite bundles -->
     <plugin id="org.jkiss.bundle.logback" version="0.0.0" />
     <plugin id="org.jkiss.bundle.apache.batik" version="0.0.0" />
+    <plugin id="org.jkiss.bundle.apache.dbcp" version="0.0.0" />
     <plugin id="org.jkiss.bundle.apache.poi" version="0.0.0" />
     <plugin id="org.jkiss.bundle.antlr4" version="0.0.0" />
     <plugin id="org.jkiss.bundle.gis" version="0.0.0" />

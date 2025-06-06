@@ -1,0 +1,7 @@
+Export-Package: org.apache.commons.dbcp2,
+ org.apache.commons.pool2,
+ org.apache.commons.pool2.impl
+Import-Package: org.slf4j,
+ org.slf4j.helpers,
+ org.slf4j.spi
+Require-Bundle: org.apache.commons.commons-logging
