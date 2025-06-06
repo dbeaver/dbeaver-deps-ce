@@ -22,6 +22,7 @@
     <plugin id="org.jkiss.bundle.apache.poi" version="0.0.0" />
     <plugin id="org.jkiss.bundle.antlr4" version="0.0.0" />
     <plugin id="org.jkiss.bundle.gis" version="0.0.0" />
+    <plugin id="org.jkiss.bundle.graphql" version="0.0.0" />
     <plugin id="org.jkiss.bundle.jackson" version="0.0.0" />
     <plugin id="org.jkiss.bundle.jetty11.websocket" version="0.0.0" />
     <plugin id="org.jkiss.bundle.jetty12.websocket" version="0.0.0" />
