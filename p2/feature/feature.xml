@@ -23,5 +23,6 @@
     <plugin id="org.jkiss.bundle.jetty12.websocket" version="0.0.0" />
     <plugin id="org.jkiss.bundle.jfreechart" version="0.0.0" />
     <plugin id="org.jkiss.bundle.poi" version="0.0.0" />
+    <plugin id="org.jkiss.bundle.sshj" version="0.0.0" />
 
 </feature>
