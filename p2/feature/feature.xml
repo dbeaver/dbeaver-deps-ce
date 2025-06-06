@@ -31,6 +31,7 @@
     <plugin id="org.jkiss.bundle.jetty12.websocket" version="0.0.0" />
     <plugin id="org.jkiss.bundle.jfreechart" version="0.0.0" />
     <plugin id="org.jkiss.bundle.okhttp" version="0.0.0" />
+    <plugin id="org.jkiss.bundle.openai" version="0.0.0" />
     <plugin id="org.jkiss.bundle.sshj" version="0.0.0" />
 
 </feature>

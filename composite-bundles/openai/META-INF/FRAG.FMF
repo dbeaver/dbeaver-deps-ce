@@ -1,0 +1,14 @@
+Export-Package: com.theokanning.openai,
+ com.theokanning.openai.completion,
+ com.theokanning.openai.completion.chat,
+ com.theokanning.openai.embedding,
+ com.theokanning.openai.file,
+ com.theokanning.openai.fine_tuning,
+ com.theokanning.openai.finetune,
+ com.theokanning.openai.model,
+ com.theokanning.openai.service,
+ io.reactivex,
+ retrofit2.adapter.rxjava2,
+ retrofit2.converter.jackson
+Require-Bundle: org.jkiss.bundle.jackson;visibility:=reexport,
+ org.jkiss.bundle.okhttp;visibility:=reexport
