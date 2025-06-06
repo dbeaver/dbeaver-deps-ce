@@ -14,6 +14,7 @@
     <plugin id="org.apache.commons.cli" version="0.0.0" />
     <plugin id="org.apache.commons.jexl" version="0.0.0" />
     <plugin id="org.apache.commons.commons-jxpath" version="0.0.0" />
+    <plugin id="com.jcraft.jsch" version="0.2.8" />
 
     <!-- composite bundles -->
     <plugin id="org.jkiss.bundle.logback" version="0.0.0" />
