@@ -20,6 +20,7 @@
         <module>gis</module>
         <module>jetty11.websocket</module>
         <module>jetty12.websocket</module>
+        <module>jfreechart</module>
         <module>poi</module>
     </modules>
     <build>
