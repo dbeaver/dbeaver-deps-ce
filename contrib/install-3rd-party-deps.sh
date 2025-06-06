@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ../jsch
+cd ../../jsch
 mvn clean install -DskipTests
 cd ../dbeaver-deps-p2/contrib
 
