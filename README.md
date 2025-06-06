@@ -7,3 +7,5 @@ We convert plain Maven deps into osgi bundles here
 - Add icu.base sources
 - Repackage GIS WKG
 - Get rid of jfreechart.swt (add our custom ChartComposite in dbeaver codebase)
+- Fix jetty.server
+ 
