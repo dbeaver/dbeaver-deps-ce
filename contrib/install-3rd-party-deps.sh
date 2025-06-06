@@ -1,4 +1,7 @@
 #!/bin/bash
-cd contrib
+cd ../../jsch
+mvn clean install -DskipTests
+cd ../dbeaver-deps-p2/contrib
+
 mvn install:install-file -Dfile=com.ibm.icu.base_58.2.0.v20170418-1837.jar -DgroupId=com.ibm.icu -DartifactId=com.ibm.icu.base -Dversion=58.2.0 -Dpackaging=jar
 mvn install:install-file -Dfile=wkg-0.1-SNAPSHOT.jar -DgroupId=org.cugos -DartifactId=wkg -Dversion=0.1-SNAPSHOT -Dpackaging=jar
