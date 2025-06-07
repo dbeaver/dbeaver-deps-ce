@@ -19,7 +19,6 @@
     <modules>
         <module>../dbeaver-osgi-common/maven-osgi-packer</module>
         <module>composite-bundles</module>
-        <module>p2</module>
     </modules>
 
     <build>

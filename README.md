@@ -8,6 +8,11 @@ Target P2 repository location: https://repo.dbeaver.net/p2/ce
 
 These dependencies are used in [DBeaver](https://github.com/dbeaver/dbeaver), [CloudBeaver](https://github.com/dbeaver/cloudbeaver) and other products.
 
+## Build
+
+- Run `mvn package` in repo root. It will build dependent OSGI bundles
+- Go to `p2` folder and run `mvn package`. This will build P2 repository.
+
 ## TODO
 
 - Add icu.base sources
