@@ -17,6 +17,3 @@ These dependencies are used in [DBeaver](https://github.com/dbeaver/dbeaver), [C
 
 - Add icu.base sources
 - Repackage GIS WKG
-- Get rid of jfreechart.swt (add our custom ChartComposite in dbeaver codebase)
-- Fix jetty.server
- 
