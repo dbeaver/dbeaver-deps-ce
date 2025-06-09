@@ -16,6 +16,12 @@
         <dependency>
             <groupId>org.eclipse.jetty.ee10.websocket</groupId>
             <artifactId>jetty-ee10-websocket-jakarta-client</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 </project>
