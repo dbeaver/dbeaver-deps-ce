@@ -15,6 +15,5 @@ jobs:
     name: Build
     secrets: inherit
     with:
-      run: ./dbeaver-deps-ce/contrib/install-3rd-party-deps.sh
       project-deps: ./dbeaver-deps-ce/project.deps
       timeout-minutes: 2
