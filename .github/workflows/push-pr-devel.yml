@@ -16,4 +16,4 @@ jobs:
     secrets: inherit
     with:
       project-deps: ./dbeaver-deps-ce/project.deps
-      timeout-minutes: 2
+      timeout-minutes: 10
