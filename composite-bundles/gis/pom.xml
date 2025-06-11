@@ -46,13 +46,7 @@
         <dependency>
             <groupId>org.cugos</groupId>
             <artifactId>wkg</artifactId>
-            <version>0.1-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.antlr</groupId>
-                    <artifactId>antlr4-runtime</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>0.1</version>
         </dependency>
     </dependencies>
 

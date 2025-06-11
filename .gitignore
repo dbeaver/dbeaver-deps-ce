@@ -1,2 +1,3 @@
-/target-bundles/*
+.m2
 target
+/target-bundles/*
