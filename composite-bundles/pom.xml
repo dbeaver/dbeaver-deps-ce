@@ -18,7 +18,7 @@
     <repositories>
         <repository>
             <id>dbeaver-internal</id>
-            <url>https://nexus.dev.dbeaver.com/repository/maven-custom/</url>
+            <url>https://nexus.dbeaver.net/repository/maven-custom/</url>
             <layout>default</layout>
         </repository>
     </repositories>
