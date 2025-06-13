@@ -6,7 +6,7 @@
 
     <groupId>org.jkiss.bundle</groupId>
     <artifactId>okhttp</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
