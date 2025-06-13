@@ -19,12 +19,12 @@
         <!-- Add Maven Central first to make it the default -->
         <repository>
             <id>central-repo</id>
-            <url>https://repo.maven.apache.org/maven2</url>
+            <url>${repo.maven.central.url}</url>
             <layout>default</layout>
         </repository>
         <repository>
             <id>dbeaver-internal</id>
-            <url>https://nexus.dbeaver.net/repository/maven-custom/</url>
+            <url>${repo.maven.dbeaver-custom.url}</url>
             <layout>default</layout>
         </repository>
     </repositories>
@@ -45,6 +45,7 @@
         <module>openai</module>
         <module>sshj</module>
     </modules>
+
     <build>
         <plugins>
             <plugin>
