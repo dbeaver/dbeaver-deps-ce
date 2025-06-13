@@ -16,6 +16,12 @@
     </parent>
 
     <repositories>
+        <!-- Add Maven Central first to make it the default -->
+        <repository>
+            <id>central-repo</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+        </repository>
         <repository>
             <id>dbeaver-internal</id>
             <url>https://nexus.dev.dbeaver.com/repository/maven-custom/</url>

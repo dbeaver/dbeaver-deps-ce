@@ -1,7 +1,7 @@
 # DBeaver Community third party dependencies
 
 We convert plain Maven artifacts into osgi bundles here.
-Maven plugin [maven-osgi-packer](https://github.com/dbeaver/dbeaver-osgi-common/maven-osgi-packer) parses maven dependencies and produces OSGI bundles. 
+Maven plugin [maven-osgi-packer](https://github.com/dbeaver/dbeaver-osgi-common/) parses maven dependencies and produces OSGI bundles in `target-bundles` folder. 
 Which than packed into [P2](https://help.sonatype.com/en/p2-repositories.html) repository.
 
 Target P2 repository location: https://repo.dbeaver.net/p2/ce
