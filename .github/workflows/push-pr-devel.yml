@@ -14,8 +14,9 @@ jobs:
     uses: dbeaver/dbeaver-common/.github/workflows/mvn-package.yml@devel
     name: Build
     secrets: inherit
-    permissions:
-      contents: read
     with:
       project-deps: ./dbeaver-deps-ce/project.deps
       timeout-minutes: 10
+  check-deps:
+    name: Submit Dependency Snapshot
+    uses: advanced-security/maven-dependency-submission-action@v3
