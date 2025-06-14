@@ -18,6 +18,20 @@
         <java.version>${java.version.drivers}</java.version>
     </properties>
 
+    <repositories>
+        <!-- Add Maven Central first to make it the default -->
+        <repository>
+            <id>central-repo</id>
+            <url>${repo.maven.central.url}</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>dbeaver-internal</id>
+            <url>${repo.maven.dbeaver-custom.url}</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
     <!-- Dependencies -->
     <dependencies>
         <dependency>
@@ -51,6 +65,11 @@
             <artifactId>jsch</artifactId>
             <version>0.2.8</version>
             <exclusions><exclusion><groupId>*</groupId><artifactId>*</artifactId></exclusion></exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.99.0</version>
         </dependency>
 
 
