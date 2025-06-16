@@ -10,12 +10,28 @@ on:
     branches: [devel]
 
 jobs:
-  build-java:
-    uses: dbeaver/dbeaver-common/.github/workflows/mvn-package.yml@devel
-    name: Build
-    secrets: inherit
+  build:
+    name: Build P2
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     permissions:
       contents: read
-    with:
-      project-deps: ./dbeaver-deps-ce/project.deps
-      timeout-minutes: 10
+
+    outputs:
+      run-id: ${{ github.run_id }}
+
+    env:
+      MAVEN_OPTS: -Xmx2048m
+
+    steps:
+      - uses: dbeaver/github-actions/prepare-for-a-maven-lifecycle@devel
+        with:
+          project-deps: ./dbeaver-deps-ce/project.deps
+
+      - name: Verify target-bundles
+        run: mvn clean verify -B -T1C
+        working-directory: ${{ env.CHECKOUT_PATH || '.' }}
+
+      - name: Verify P2
+        run: mvn clean verify -B -T1C
+        working-directory: ${{ env.CHECKOUT_PATH || '.' }}/p2
