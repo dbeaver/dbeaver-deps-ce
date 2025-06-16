@@ -26,7 +26,7 @@ jobs:
       MAVEN_OPTS: -Xmx2048m
 
     steps:
-      - uses: dbeaver/github-actions/prepare-for-a-maven-lifecycle@devel
+      - uses: dbeaver/github-actions/prepare-for-a-maven-lifecycle@dbeaver/dbeaver-devops#1955-gh-workflow-p2
         with:
           project-deps: ${{ inputs.project-directory }}/project.deps
 
