@@ -6,7 +6,7 @@
 
     <groupId>org.jkiss.bundle</groupId>
     <artifactId>logback</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
@@ -15,11 +15,15 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <properties>
+        <logback.version>1.5.18</logback.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.4.14</version>
+            <version>${logback.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -30,7 +34,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>1.4.14</version>
+            <version>${logback.version}</version>
         </dependency>
     </dependencies>
 
