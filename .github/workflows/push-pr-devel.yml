@@ -14,3 +14,5 @@ jobs:
     uses: ./.github/workflows/verify.yaml
     with:
       project-directory: ./dbeaver-deps-ce
+    permissions:
+      contents: read
