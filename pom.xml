@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.common</groupId>
-        <artifactId>com.dbeaver.common.main</artifactId>
+        <artifactId>com.dbeaver.common.root</artifactId>
         <version>2.4.0-SNAPSHOT</version>
         <relativePath>../dbeaver-common/root/pom.xml</relativePath>
     </parent>
