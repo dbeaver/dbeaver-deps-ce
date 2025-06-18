@@ -1,0 +1,39 @@
+name: Verify
+
+on:
+  workflow_call:
+    inputs:
+      project-directory:
+        required: true
+        type: string
+
+    outputs:
+      run-id:
+        value: ${{ jobs.build-and-test.outputs.run-id }}
+
+jobs:
+  build:
+    name: Verify P2 build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 7
+    permissions:
+      contents: read
+
+    outputs:
+      run-id: ${{ github.run_id }}
+
+    env:
+      MAVEN_OPTS: -Xmx2048m
+
+    steps:
+      - uses: dbeaver/github-actions/prepare-for-a-maven-lifecycle@devel
+        with:
+          project-deps: ${{ inputs.project-directory }}/project.deps
+
+      - name: Verify target-bundles
+        run: mvn clean verify -B -T1C
+        working-directory: ${{ env.CHECKOUT_PATH || '.' }}
+
+      - name: Verify P2
+        run: mvn clean verify -B -T1C
+        working-directory: ${{ env.CHECKOUT_PATH || '.' }}/p2

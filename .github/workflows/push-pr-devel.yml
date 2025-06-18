@@ -10,12 +10,9 @@ on:
     branches: [devel]
 
 jobs:
-  build-java:
-    uses: dbeaver/dbeaver-common/.github/workflows/mvn-package.yml@devel
-    name: Build
-    secrets: inherit
+  build:
+    uses: ./.github/workflows/verify.yaml
+    with:
+      project-directory: ./dbeaver-deps-ce
     permissions:
       contents: read
-    with:
-      project-deps: ./dbeaver-deps-ce/project.deps
-      timeout-minutes: 10
