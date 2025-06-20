@@ -19,7 +19,7 @@
         <dependency>
             <groupId>com.hierynomus</groupId>
             <artifactId>sshj</artifactId>
-            <version>0.34.0</version>
+            <version>0.40.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
