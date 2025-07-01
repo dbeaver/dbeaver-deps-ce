@@ -3,7 +3,7 @@
 
     <category-def name="ce-bundle" label="CE bundle">
     </category-def>
-    <feature id="com.dbeaver.deps.ce">
+    <feature id="com.dbeaver.deps.ce.feature">
         <category name="ce-bundle"/>
     </feature>
 </site>

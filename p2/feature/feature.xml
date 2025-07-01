@@ -1,5 +1,5 @@
 <feature
-        id="com.dbeaver.deps.ce"
+        id="com.dbeaver.deps.ce.feature"
         label="CE Bundles"
         version="1.0.0.qualifier"
         provider-name="DBeaver Corp">
