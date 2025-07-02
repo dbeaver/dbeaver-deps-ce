@@ -1,7 +1,7 @@
 <site>
     <description name="DBeaver 3rd party dependencies update site" url="https://repo.dbeaver.net/p2/ce">DBeaver 3rd party dependencies update site</description>
 
-    <category-def name="ce-bundle" label="CE bundle">
+    <category-def name="ce-bundle" label="DBeaver CE deps">
     </category-def>
     <feature id="com.dbeaver.deps.ce.feature">
         <category name="ce-bundle"/>
