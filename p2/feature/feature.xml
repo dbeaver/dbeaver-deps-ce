@@ -1,6 +1,6 @@
 <feature
         id="com.dbeaver.deps.ce.feature"
-        label="CE Bundles"
+        label="DBeaver Community Dependencies"
         version="1.0.0.qualifier"
         provider-name="DBeaver Corp">
 
