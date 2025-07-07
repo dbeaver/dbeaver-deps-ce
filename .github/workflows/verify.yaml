@@ -30,7 +30,7 @@ jobs:
         with:
           project-deps: ${{ inputs.project-directory }}/project.deps
           # This is a hack. The project-deps file rarely changes,
-          # ensuring that the cache is reused across all pretty much all runs.
+          # ensuring that the cache is reused across pretty much all runs.
           cache-dependency-path: "**/project.deps"
 
       - name: Verify target-bundles
