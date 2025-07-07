@@ -26,9 +26,12 @@ jobs:
       MAVEN_OPTS: -Xmx2048m
 
     steps:
-      - uses: dbeaver/github-actions/prepare-for-a-maven-lifecycle@devel
+      - uses: dbeaver/github-actions/prepare-for-a-maven-lifecycle@dbeaver/dbeaver-devops#1978-cache
         with:
           project-deps: ${{ inputs.project-directory }}/project.deps
+          # This is a hack. The project-deps file rarely changes,
+          # ensuring that the cache is reused across all pretty much all runs.
+          cache-dependency-path: "**/project.deps"
 
       - name: Verify target-bundles
         run: mvn clean verify -B -T1C
