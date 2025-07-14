@@ -42,7 +42,6 @@
         <module>jfreechart</module>
         <module>logback</module>
         <module>okhttp</module>
-        <module>openai</module>
         <module>sshj</module>
     </modules>
 
