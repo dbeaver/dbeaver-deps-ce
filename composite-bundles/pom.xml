@@ -35,13 +35,11 @@
         <module>apache.poi</module>
         <module>gis</module>
         <module>graphql</module>
-        <module>jackson</module>
         <module>jetty.server</module>
         <module>jetty11.websocket</module>
         <module>jetty12.websocket</module>
         <module>jfreechart</module>
         <module>logback</module>
-        <module>okhttp</module>
         <module>sshj</module>
     </modules>
 
