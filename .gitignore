@@ -1,3 +1,4 @@
 .m2
 target
 /target-bundles/*
+.DS_Store

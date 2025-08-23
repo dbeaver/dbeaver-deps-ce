@@ -33,10 +33,4 @@ jobs:
           # ensuring that the cache is reused across pretty much all runs.
           cache-dependency-path: "**/project.deps"
 
-      - name: Verify target-bundles
-        run: mvn clean verify -B -T1C
-        working-directory: ${{ env.CHECKOUT_PATH || '.' }}
-
-      - name: Verify P2
-        run: mvn clean verify -B -T1C
-        working-directory: ${{ env.CHECKOUT_PATH || '.' }}/p2
+      - uses: dbeaver/github-actions/build-p2@dbeaver/dbeaver-devops#2023-custom-p2
