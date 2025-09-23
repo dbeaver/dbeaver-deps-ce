@@ -32,7 +32,6 @@
     <modules>
         <module>apache.batik</module>
         <module>apache.dbcp</module>
-        <module>apache.lang3</module>
         <module>apache.poi</module>
         <module>gis</module>
         <module>graphql</module>
