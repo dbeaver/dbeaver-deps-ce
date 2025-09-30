@@ -1,6 +1,7 @@
 Require-Bundle: org.apache.commons.commons-codec,
  org.apache.commons.commons-compress,
- org.apache.commons.commons-io
+ org.apache.commons.commons-io,
+ org.apache.commons.lang3
 Import-Package: org.slf4j
 Export-Package: org.apache.commons.io.build,
  org.apache.commons.io.charset,
