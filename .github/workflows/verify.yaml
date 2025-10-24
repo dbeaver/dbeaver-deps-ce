@@ -38,5 +38,5 @@ jobs:
         working-directory: ${{ env.CHECKOUT_PATH || '.' }}
 
       - name: Verify P2
-        run: mvn clean verify -B -T1C
+        run: mvn clean verify -B
         working-directory: ${{ env.CHECKOUT_PATH || '.' }}/p2
