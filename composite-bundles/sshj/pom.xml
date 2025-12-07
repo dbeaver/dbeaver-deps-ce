@@ -6,7 +6,7 @@
 
     <groupId>org.jkiss.bundle</groupId>
     <artifactId>sshj</artifactId>
-    <version>0.34.2</version>
+    <version>0.40.0</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
