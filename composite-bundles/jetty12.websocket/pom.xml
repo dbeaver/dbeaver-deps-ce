@@ -4,7 +4,7 @@
 
     <groupId>org.jkiss.bundle</groupId>
     <artifactId>jetty12.websocket</artifactId>
-    <version>${jetty.version}</version>
+    <version>12.1.5</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
