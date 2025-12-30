@@ -14,14 +14,14 @@
     </parent>
 
     <properties>
-        <jetty.server.version>12.1.5</jetty.server.version>
+        <jetty.server.version>${jetty.version}</jetty.server.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>${jetty.server.version}</version>
+            <version>${jetty.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -32,7 +32,7 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-http</artifactId>
-            <version>${jetty.server.version}</version>
+            <version>${jetty.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -43,7 +43,7 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-io</artifactId>
-            <version>${jetty.server.version}</version>
+            <version>${jetty.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -54,7 +54,7 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-util</artifactId>
-            <version>${jetty.server.version}</version>
+            <version>${jetty.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -65,7 +65,7 @@
         <dependency>
             <groupId>org.eclipse.jetty.ee10</groupId>
             <artifactId>jetty-ee10-servlets</artifactId>
-            <version>${jetty.server.version}</version>
+            <version>${jetty.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -76,7 +76,7 @@
         <dependency>
             <groupId>org.eclipse.jetty.ee10.websocket</groupId>
             <artifactId>jetty-ee10-websocket-jakarta-server</artifactId>
-            <version>${jetty.server.version}</version>
+            <version>${jetty.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -123,7 +123,7 @@
         <dependency>
             <groupId>org.eclipse.jetty.ee10.websocket</groupId>
             <artifactId>jetty-ee10-websocket-jetty-server</artifactId>
-            <version>${jetty.server.version}</version>
+            <version>${jetty.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -138,7 +138,7 @@
         <dependency>
             <groupId>org.eclipse.jetty.ee10.websocket</groupId>
             <artifactId>jetty-ee10-websocket-jakarta-client</artifactId>
-            <version>${jetty.server.version}</version>
+            <version>${jetty.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -149,7 +149,7 @@
         <dependency>
             <groupId>org.eclipse.jetty.websocket</groupId>
             <artifactId>jetty-websocket-core-common</artifactId>
-            <version>${jetty.server.version}</version>
+            <version>${jetty.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
