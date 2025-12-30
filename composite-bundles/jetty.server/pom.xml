@@ -13,10 +13,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <properties>
-        <jetty.server.version>${jetty.version}</jetty.server.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
