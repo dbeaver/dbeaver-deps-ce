@@ -4,7 +4,7 @@
 
     <groupId>org.jkiss.bundle</groupId>
     <artifactId>jetty12.websocket</artifactId>
-    <version>12.0.15</version>
+    <version>12.1.5</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
@@ -14,8 +14,8 @@
     </parent>
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.jetty.ee10.websocket</groupId>
-            <artifactId>jetty-ee10-websocket-jakarta-client</artifactId>
+            <groupId>org.eclipse.jetty.ee11.websocket</groupId>
+            <artifactId>jetty-ee11-websocket-jakarta-client</artifactId>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
