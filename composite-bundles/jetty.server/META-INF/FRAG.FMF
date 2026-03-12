@@ -2,7 +2,7 @@ Provide-Capability: osgi.serviceloader;osgi.serviceloader="org.eclipse.jetty.ee1
  osgi.serviceloader;osgi.serviceloader="jakarta.servlet.ServletContainerInitializer",
  osgi.serviceloader;osgi.serviceloader="jakarta.websocket.server.ServerEndpointConfig$Configurator"
 Require-Bundle: jakarta.servlet-api;bundle-version="6.1.0";visibility:=reexport
-Export-Package: jakarta.websocket,
+Export-Package: jakarta.websocket;version="2.2.0",
  jakarta.websocket.server,
  org.eclipse.jetty.alpn.client,
  org.eclipse.jetty.client,
