@@ -15,6 +15,10 @@
     <plugin id="org.apache.commons.lang3" version="0.0.0" />
     <plugin id="org.apache.ant" version="1.99.1" />
     <plugin id="com.jcraft.jsch" version="0.2.8" />
+    <plugin id="bcpg" version="1.84.0" />
+    <plugin id="bcprov" version="1.84.0" />
+    <plugin id="bcpkix" version="1.84.0" />
+    <plugin id="bcutil" version="1.84.0" />
     <plugin id="picocli" version="0.0.0" />
 
     <!-- test deps -->
