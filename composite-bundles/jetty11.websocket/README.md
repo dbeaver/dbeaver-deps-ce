@@ -1,1 +1,0 @@
-# eclipse-bundle-jakarta-jetty11-websocket
