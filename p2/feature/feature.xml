@@ -1,4 +1,4 @@
- <feature
+<feature
         id="com.dbeaver.deps.ce.feature"
         label="DBeaver Community Dependencies"
         version="1.0.0.qualifier"
