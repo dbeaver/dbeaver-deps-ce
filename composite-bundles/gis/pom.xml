@@ -6,7 +6,7 @@
 
     <groupId>org.jkiss.bundle</groupId>
     <artifactId>gis</artifactId>
-    <version>2.0.8</version>
+    <version>2.0.9</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
@@ -19,7 +19,7 @@
         <dependency>
             <groupId>org.orbisgis</groupId>
             <artifactId>cts</artifactId>
-            <version>1.5.2</version>
+            <version>1.7.2</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -30,17 +30,17 @@
         <dependency>
             <groupId>org.locationtech.jts</groupId>
             <artifactId>jts-core</artifactId>
-            <version>1.19.0</version>
+            <version>1.20.0</version>
         </dependency>
         <dependency>
             <groupId>org.locationtech.jts.io</groupId>
             <artifactId>jts-io-common</artifactId>
-            <version>1.19.0</version>
+            <version>1.20.0</version>
         </dependency>
         <dependency>
             <groupId>org.ejml</groupId>
             <artifactId>ejml-ddense</artifactId>
-            <version>0.41</version>
+            <version>0.46.0</version>
         </dependency>
         <!-- WKG is not in Maven Central, use from contribs -->
         <dependency>
@@ -49,9 +49,5 @@
             <version>0.1</version>
         </dependency>
     </dependencies>
-
-    <properties>
-        <poi.version>5.4.0</poi.version>
-    </properties>
 
 </project>
