@@ -14,7 +14,7 @@
     <plugin id="org.apache.commons.jexl3" version="0.0.0" />
     <plugin id="org.apache.commons.lang3" version="0.0.0" />
     <plugin id="org.apache.ant" version="1.99.1" />
-    <plugin id="com.jcraft.jsch" version="0.2.8" />
+    <plugin id="com.jcraft.jsch" version="2.28.7" />
     <plugin id="picocli" version="0.0.0" />
 
     <!-- test deps -->
