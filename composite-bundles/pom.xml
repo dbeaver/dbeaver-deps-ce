@@ -15,6 +15,11 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <properties>
+        <deps.exclude.groups/>
+        <deps.exclude.artifacts/>
+    </properties>
+
     <repositories>
         <!-- Add Maven Central first to make it the default -->
         <repository>
@@ -60,7 +65,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.8</version>
                 <executions>
                     <execution>
                         <id>copy-dependencies</id>
@@ -72,6 +76,8 @@
                             <outputDirectory>target/lib</outputDirectory>
                             <excludeScope>compile</excludeScope>
                             <includeScope>runtime</includeScope>
+                            <excludeGroupIds>${deps.exclude.groups}</excludeGroupIds>
+                            <excludeArtifactIds>${deps.exclude.artifacts}</excludeArtifactIds>
                         </configuration>
                     </execution>
                 </executions>
