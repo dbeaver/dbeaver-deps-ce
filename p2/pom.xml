@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>${java.version.drivers}</java.version>
-        <bc.version>1.84</bc.version>
+        <bc.version>1.85</bc.version>
     </properties>
 
     <repositories>
