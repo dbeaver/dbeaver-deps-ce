@@ -35,7 +35,6 @@
     </repositories>
 
     <modules>
-        <module>apache.batik</module>
         <module>apache.dbcp</module>
         <module>apache.poi</module>
         <module>gis</module>
