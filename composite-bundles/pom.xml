@@ -40,7 +40,6 @@
         <module>gis</module>
         <module>graphql</module>
         <module>jetty.server</module>
-        <module>jetty12.websocket</module>
         <module>jfreechart</module>
         <module>logback</module>
         <module>sshj</module>
