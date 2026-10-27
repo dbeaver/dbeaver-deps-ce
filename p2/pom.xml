@@ -81,13 +81,6 @@
             <artifactId>picocli</artifactId>
         </dependency>
 
-        <!-- Contributes -->
-        <dependency>
-            <groupId>com.ibm.icu</groupId>
-            <artifactId>com.ibm.icu.base</artifactId>
-            <version>58.2.0</version>
-        </dependency>
-
         <!-- Test deps -->
         <dependency>
             <groupId>org.mockito</groupId>
