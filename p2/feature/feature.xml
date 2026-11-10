@@ -7,6 +7,7 @@
     <!-- maven -->
     <plugin id="org.antlr.antlr4-runtime" version="0.0.0"/>
     <plugin id="com.github.jsqlparser" version="0.0.0"/>
+    <plugin id="com.google.guava" version="33.8.0.jre"/>
     <plugin id="org.apache.commons.commons-logging" version="0.0.0" />
     <plugin id="org.apache.commons.jexl3" version="0.0.0" />
     <plugin id="org.apache.commons.lang3" version="0.0.0" />
