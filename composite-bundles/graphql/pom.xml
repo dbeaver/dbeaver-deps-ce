@@ -6,7 +6,7 @@
 
     <groupId>org.jkiss.bundle</groupId>
     <artifactId>graphql</artifactId>
-    <version>22.2.0</version>
+    <version>24.5.0</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>com.dbeaver.osgi</groupId>
@@ -19,7 +19,7 @@
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java</artifactId>
-            <version>22.2</version>
+            <version>24.5</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-extended-scalars</artifactId>
-            <version>22.0</version>
+            <version>24.0</version>
         </dependency>
     </dependencies>
 
